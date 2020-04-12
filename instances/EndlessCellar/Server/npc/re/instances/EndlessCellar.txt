@@ -32,7 +32,7 @@ e_tower,76,79,0	script	Cellar Protection Stone	2_MONEMUS,{
 	next;
 	switch( select(
 		( .@party_id && .@is_leader && !.@has_instance )?"Enter " + .instance_name$:"",
-		( .@party_id && .@has_instance )?"Return " + .instance_name$:"",
+		( .@party_id && .@has_instance )?"Enter " + .instance_name$:"",
 		( .@party_id && .@is_leader && .@has_instance )?"Destroy " + .instance_name$:"",
 	"Nevermind."
 		)){
@@ -40,7 +40,8 @@ e_tower,76,79,0	script	Cellar Protection Stone	2_MONEMUS,{
 		set .@instance_delay, ( instance_delay_cellar - gettimetick(2) );
 		if( .@has_instance == 0 && .@instance_delay > 0 )
 		{
-			mes "You have to wait : ^FF0000"+.@instance_delay+" seconds.^000000";
+			mes "You cannot re-enter until cooldown has finished:";
+			mes "^FF0000"+ gettimestr("%ddays %Hh %Mm %Ss", 30, .@instance_delay) +"^000000";
 			close;
 		}
 		getpartymember .@party_id,2;
@@ -188,7 +189,7 @@ OnInit:
 	set .map_size, getarraysize( .map$ );
 	set .min_party_member, 1;
 	set .instance_zeny, 0;
-	set .instance_delay, 331200;
+	set .instance_delay, 331200; // 3 days 20 hrs
 	set .instance_name$, "Endless Cellar";
 	end;
 }
@@ -264,12 +265,12 @@ OnInit:
 		}
 	}
 	mes "[Angel Pori Pori]";
-	mes "Om nom nom.  If you give me a yummy Dark Ash I'll warp you down to the 40th floor.";
+	mes "Om nom nom.  If you give me a yummy "+ getitemname('EC_AshID) +" I'll warp you down to the 40th floor.";
 	next;
 	if(select("40th Level::Cancel") == 2) close;
 	if(countitem('EC_AshID) < 1){
 		mes "[Angel Pori Pori]";
-		mes "Aww, you don't have a Dark Ash.  Come back when you do.";
+		mes "Aww, you don't have a "+ getitemname('EC_AshID) +".  Come back when you do.";
 		close;
 	}
 	if('EC_Floor >= 41) {
@@ -279,7 +280,7 @@ OnInit:
 	}
 	if(getpartyleader(getcharid(1),2) != getcharid(0)){
 		mes "[Angel Pori Pori]";
-		mes "Only the party leader can give me a Dark Ash.";
+		mes "Only the party leader can give me a "+ getitemname('EC_AshID) +".";
 		close;
 	}
 	set 'EC_Floor,41;
