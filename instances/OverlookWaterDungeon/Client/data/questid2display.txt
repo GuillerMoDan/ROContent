@@ -1,0 +1,19 @@
+50531#Overlook Water Dungeon#SG_FEEL#QUE_NOIMAGE#
+The Overlook Water Dungeon is teeming with Aged monsters. Hunt them all down and claim your reward at the Overlook Water Dungeon signpost#
+Hunt 20 Aged Plankton and 20 Aged Marina#
+
+50532#Overlook Water Dungeon#SG_FEEL#QUE_NOIMAGE#
+The Overlook Water Dungeon is teeming with Aged monsters. Hunt them all down and claim your reward at the Overlook Water Dungeon signpost#
+Hunt 40 Aged Vadon and 40 Aged Kukre#
+
+50533#Overlook Water Dungeon#SG_FEEL#QUE_NOIMAGE#
+The Overlook Water Dungeon is teeming with Aged monsters. Hunt them all down and claim your reward at the Overlook Water Dungeon signpost#
+Hunt 60 Aged Obeaune and 60 Aged Marse#
+
+50534#Overlook Water Dungeon#SG_FEEL#QUE_NOIMAGE#
+The Overlook Water Dungeon is teeming with Aged monsters. Hunt them all down and claim your reward at the Overlook Water Dungeon signpost#
+Hunt 80 Aged Marc and 80 Aged Phen#
+
+50535#Overlook Water Dungeon#SG_FEEL#QUE_NOIMAGE#
+The Overlook Water Dungeon is teeming with Aged monsters. Hunt them all down and claim your reward at the Overlook Water Dungeon signpost#
+Hunt 100 Aged Strouf and 100 Aged Merman#
